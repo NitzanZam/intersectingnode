@@ -14,15 +14,13 @@ public class SinglyLinkedList {
 		this.head = head;
 	}
 
-	public void build(LinkedList<Node> list){
+	protected void build(LinkedList<Node> list){
 		Iterator<Node> i = list.iterator();
 		head = i.next();
 		Node tmp = head;
-		System.out.println(tmp.getData());
 		while (i.hasNext()) {
 			tmp.setNext(i.next());
 			tmp = tmp.getNext();
-			System.out.println(tmp.getData());
 		}
 
 	}
